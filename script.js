@@ -1,5 +1,5 @@
 var counter = 0;
-
+var counterdown= 0;
 function upvote() {
  counter = counter + 1;
 
@@ -8,8 +8,8 @@ function upvote() {
 }
 
 function downvote() {
- counter = counter - 1;
+ counterdown = counterdown - 1;
 
  document.getElementById("votesdows").innerHTML =
-  counter + " Down votes";
+  counterdown + " Down votes";
 }
