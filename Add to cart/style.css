@@ -1,5 +1,36 @@
-.cartimage{
+li {
+  display: inline;
+  list-style: none;
+  float: left;
+  margin: 50px;
+  font-family: "Source Sans Pro";
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-left: auto;
+  text-align: center;
+  width: 16%;
+  transition: all 0.3s linear;
 
+}
+.menuheader {
+  background-color: red;
+  display: block;
+}
+
+ul{
+
+  background-color: red;
+}
+
+html {
+background-image: url("img/background.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+
+}
+.cartimage{
   width: 30px;
   height: 30px;
 }
@@ -11,13 +42,12 @@
 }
 
 body {
- color: midnightblue;
  font-family: Helvetica Neue;
 }
 
 .product {
  display: inline-block;
- margin: 5px;
+ margin: 35px;
 }
 
 #basketImage {
