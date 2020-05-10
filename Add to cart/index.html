@@ -5,20 +5,20 @@
  </head>
  <body>
   <h1>Online Store</h1>
-  <img id="basketImage" src="/img/cart.png">
+  <img class="cartimage" id="basketImage" src="img/cart.png">
   <h2 id="itemCounter">0</h2>
   <p id="orderTotal"></p>
 
   <div class="product">
-   <img src="/img/backpack.png">
+   <img class="image" src="img/bagpack.png">
    <h3>Backpack</h3>
-   <button>Add to Cart</button>
+   <button onclick="addToCart(backpack)">Add to Cart</button>
   </div>
 
   <div class="product">
-   <img src="/img/camera.png">
+   <img class= "image" src="img/camera.png">
    <h3>Camera</h3>
-   <button>Add to Cart</button>
+   <button onclick="addToCart(camera)">Add to Cart</button>
   </div>
 
   <script src="script.js"></script>

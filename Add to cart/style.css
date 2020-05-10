@@ -1,3 +1,15 @@
+.cartimage{
+
+  width: 30px;
+  height: 30px;
+}
+
+.image {
+ width: 60px;
+ height: 60px;
+
+}
+
 body {
  color: midnightblue;
  font-family: Helvetica Neue;
