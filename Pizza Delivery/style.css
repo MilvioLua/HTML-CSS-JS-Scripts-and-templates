@@ -1,0 +1,21 @@
+body {
+ background-color:Linen;
+ color: black;
+ font-family: "Verdana", sans-serif;
+}
+.incoming {
+  background-color:  white;
+  margin: 10px 20px 10px 20px ;
+  border: 5px solid crimson;
+}
+.ready {
+  background-color: white;
+  margin: 10px 20px 10px 20px ;
+  border: 5px solid seagreen;
+}
+h3 {
+  margin-left: 20px;
+}
+img{
+  margin-left: 10px;
+}
