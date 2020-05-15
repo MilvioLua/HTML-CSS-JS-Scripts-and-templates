@@ -9,5 +9,3 @@ class User {
 var user1 = new User("Arya");
 user1.status = "coding";
 var user2 = new User("Theon");
-
-console.log(user1);
