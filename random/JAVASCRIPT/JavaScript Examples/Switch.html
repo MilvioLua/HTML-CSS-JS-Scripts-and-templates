@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript template</title>
+<style>
+h1 {font-family:serif; font-size:36px; color:#ff0000; text-align:center}
+h2 {font-family:sans-serif; font-size:24px; color:#000000; text-align:center}
+h3 {font-family:sans-serif; font-size:12px; color:#0000ff}
+</style>
+</head>
+<body bgcolor= "#ffffff">
+ <div align="center">
+    <h1>Beginning Javascript</h1>
+ <br>
+ <h2> Which of the following is typically used for computer marked multichoice exams?</h2><br><br>
+ Choose 1,2,or 3<br><br>
+ <p>
+ 1. OCR<br>
+ 2. OMR<br>
+ 3. MICR<br><br>
+ </p>
+ 
+<script>
+
+
+         
+var Answer = prompt("Chose your answer 1, 2 or 3",0);
+ switch(Answer)
+{
+case "1": document.write("<b>No. OCR is for recognising Optical Characters</b>");break;
+case "2": document.write("<b>Yes Optical Mark Recognition is correct</b>");break;
+case "3": document.write("<b>No MICR is for recognising Magnetic Ink Characters</b>");break;
+default:   document.write("<b>Unknown choice</b>");
+}
+         
+   </script>
+   </div>
+   </body>
+
+</script>
+ </body>
+</html>

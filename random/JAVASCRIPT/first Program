@@ -1,0 +1,7 @@
+<script>
+let a= Ricardo;
+let b= Bonfim;
+
+alert (a + b);
+
+</script>
