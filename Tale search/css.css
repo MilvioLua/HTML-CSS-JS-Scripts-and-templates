@@ -1,0 +1,8 @@
+
+            var farm = await _context.Farms.FindAsync(id);
+            if (farm == null)
+            {
+                return NotFound();
+            }
+            ViewData["ParentId"] = new SelectList(_context.Farms, "Id", "Name", farm.ParentId);
+            return View(farm);
