@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Show space station IIS real time location</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+
+  <style media="screen">
+    #issmap { height: 180px; }
+  </style>
+  </head>
+  <body>
+    <h1>Space station IIS real time location</h1>
+    <p>
+      latitude: <span id="lat"></span> <br>
+      longitude: <span id="lon"></span>
+    </p>
+
+    <div id="issmap"></div>
+
+
+    <script>
+    //making map and tiles
+    const issmap = L.map('issmap').setView([0, 0], 1);
+    const attribution =
+          '&copy; <ahref="https://www.openstreetmap.org/copyrigt"> openstreetmap </a>'
+
+    const tileUrl = 'https:/{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    const tiles = L.tileLayer(tileUrl, {attribution});
+    const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+    tiles.addTo(issmap);
+
+    // making a marker with custom icons
+    var issIcon = L.icon({
+    iconUrl: 'iss.png',
+    iconSize: [20, 20],
+    iconAnchor: [20, 20],
+    });
+
+    const marker = L.marker([0, 0], {icon: issIcon}).addTo(issmap);
+
+
+    let firstTime = true;
+    async function  getISS(){
+      const response = await fetch (api_url);
+      const data = await response.json();
+      const {latitude, longitude} = data;
+
+
+    marker.setLatLng([latitude, longitude]);
+    if (firstTime) {
+    issmap.setView([latitude, longitude], 2);
+    firstTime = false;
+    }
+      document.getElementById('lat').textContent = latitude.toFixed(2);
+      document.getElementById('lon').textContent =longitude.toFixed(2);
+
+      console.log(latitude);
+      console.log(longitude);
+    }
+
+    getISS();
+
+    setInterval(getISS, 1000);
+    </script>
+
+  </body>
+</html>
