@@ -1,2 +1,5 @@
-var username = prompt();
-alert(username);
+(function() {
+
+})();
+
+
