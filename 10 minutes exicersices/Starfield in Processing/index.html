@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
 
-      <p id="confirm">Confrim ppuurchse</p>
-      <button id="button">Confirm</button>
+  $("#btn2").click(function(){
+    $("ol").append("Appended item");
+  });
+});
+</script>
+</head>
+<body>
 
-    <script type="text/javascript" <script src="index.js" charset="utf-8"></script>>
+<ol >
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
 
-    </script>
-  </body>
+<button id="btn2">Append list items</button>
+
+</body>
 </html>
-
-
